@@ -6,7 +6,10 @@ New-Item -ItemType Directory -Force .tools | Out-Null
 if (!(Test-Path '.tools/dotnet/dotnet.exe')) {
     Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -OutFile '.tools/dotnet-install.ps1'
     & '.tools/dotnet-install.ps1' -Version '10.0.401' -InstallDir "$taskRoot/.tools/dotnet" -NoPath
-    if ($LASTEXITCODE -ne 0) { throw 'SDK installation failed.' }
+    $installedSdk=Join-Path $taskRoot '.tools/dotnet/dotnet.exe'
+    if (!(Test-Path -LiteralPath $installedSdk)) { throw 'SDK installation failed: dotnet.exe is missing.' }
+    $installedVersion=& $installedSdk --version
+    if ($LASTEXITCODE -ne 0 -or $installedVersion -ne '10.0.401') { throw 'SDK installation failed: version verification failed.' }
 }
 if (!(Test-Path '.tools/opencv/build/OpenCVConfig.cmake')) {
     $opencvFile=Join-Path $taskRoot '.tools/opencv.exe'
