@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SemiInspectX.Core/SemiInspectX.Core.csproj" />
+    <Project Path="src/SemiInspectX.Infrastructure/SemiInspectX.Infrastructure.csproj" />
+    <Project Path="src/SemiInspectX.Runner/SemiInspectX.Runner.csproj" />
+    <Project Path="src/SemiInspectX.Desktop/SemiInspectX.Desktop.csproj" />
+  </Folder>
+  <Folder Name="/tests/"><Project Path="tests/SemiInspectX.Tests/SemiInspectX.Tests.csproj" /></Folder>
+</Solution>

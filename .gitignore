@@ -1,0 +1,11 @@
+.tools/
+build/
+artifacts/
+datasets/generated/
+**/bin/
+**/obj/
+.vs/
+*.user
+*.db
+*.db-shm
+*.db-wal

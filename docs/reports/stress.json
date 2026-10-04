@@ -1,0 +1,6 @@
+{
+  "cycles": 1000,
+  "minimumSavedFramesPerCycle": 1,
+  "privateMemoryGrowthBytes": -2088960,
+  "maximumAllowedGrowthBytes": 209715200
+}

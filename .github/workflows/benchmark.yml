@@ -1,0 +1,21 @@
+name: Manual performance experiment
+on:
+  workflow_dispatch:
+jobs:
+  benchmark:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies and build
+        shell: pwsh
+        run: |
+          ./scripts/bootstrap.ps1
+          ./scripts/build.ps1 -SkipTests
+          ./build/native/Release/si_generate.exe datasets/generated/evaluation 1000 314159 2
+      - name: Warmup and five paired rounds
+        shell: pwsh
+        run: ./.tools/dotnet/dotnet.exe src/SemiInspectX.Runner/bin/Release/net10.0/SemiInspectX.Runner.dll benchmark --dataset datasets/generated/evaluation --output artifacts/benchmark --count 1000 --rounds 5
+      - uses: actions/upload-artifact@v4
+        with:
+          name: performance-report
+          path: artifacts/benchmark/benchmark.*

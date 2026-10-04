@@ -1,0 +1,11 @@
+{
+  "name":"Synthetic-Line-32-Throughput",
+  "version":1,
+  "referenceImage":"reference.pgm",
+  "marker":{"x":25,"y":25,"width":48,"height":48},
+  "inspection":{"x":120,"y":120,"width":180,"height":180},
+  "measurement":{"x":330,"y":330,"width":80,"height":120},
+  "maxShift":5,"threshold":30,"minArea":9,"minAlignment":0.8,
+  "minWidth":30,"maxWidth":34,"micronsPerPixel":0.5,
+  "workers":2,"queueCapacity":8,"stageDelayMs":0,"cameraDelayMs":0
+}

@@ -1,0 +1,11 @@
+{
+  "NativePassed": 4,
+  "ManagedPassed": 14,
+  "StressCycles": 1000,
+  "IndependentEvaluationFrames": 1000,
+  "SavedImageBytesVerified": true,
+  "PortableSmoke": "CLI and WPF, minimal PATH, relocated on same Windows host",
+  "MinimumSavedFramesPerCycle": 1,
+  "NoiseFreeEvaluationFrames": 1000,
+  "HostedCiVerified": false
+}

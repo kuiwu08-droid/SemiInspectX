@@ -1,0 +1,17 @@
+{
+  "seed": 271828,
+  "noiseSigma": 0,
+  "frames": 1000,
+  "defects": 300,
+  "matched": 300,
+  "recall": 1,
+  "normals": 500,
+  "falsePositives": 0,
+  "falsePositiveRate": 0,
+  "widthMeanAbsoluteErrorPixels": 0,
+  "widthRejected": 200,
+  "alignmentErrors": 0,
+  "matching": "Bounding-box IoU \u003E= 0.5, aligned coordinates",
+  "passed": true,
+  "failures": []
+}

@@ -1,0 +1,38 @@
+name: Build and regression
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  windows:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.401'
+      - name: Dependencies
+        shell: pwsh
+        run: ./scripts/bootstrap.ps1
+      - name: Build, CTest, xUnit and stress regression
+        shell: pwsh
+        run: ./scripts/build.ps1
+      - name: Independent synthetic evaluation
+        shell: pwsh
+        run: ./scripts/evaluate.ps1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-reports
+          path: |
+            artifacts/tests/*.trx
+            artifacts/tests/stress.json
+            artifacts/evaluation/*
+            artifacts/metrology/*
+      - name: Portable release
+        shell: pwsh
+        run: ./scripts/publish.ps1
+      - name: Relocated package smoke with minimal PATH
+        shell: pwsh
+        run: ./scripts/release-smoke.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SemiInspectX-win-x64
+          path: artifacts/releases/*.zip

@@ -1,0 +1,143 @@
+{
+  "environment": {
+    "osDescription": "Microsoft Windows 10.0.19045",
+    "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD",
+    "logicalProcessors": 12,
+    "runtime": "10.0.12",
+    "configuration": "Release x64",
+    "openCv": "4.14.0; internal threads=1",
+    "storage": "SQLite WAL synchronous=NORMAL; image \u002B transaction \u002B latency metadata update",
+    "stageDelayMs": 0,
+    "cameraDelayMs": 0
+  },
+  "rounds": 5,
+  "framesPerRound": 1000,
+  "algorithmP50": 0.4001,
+  "algorithmP95": 0.4506,
+  "serialMeanFps": 557.5767537967515,
+  "pipelineMeanFps": 912.9408708258652,
+  "throughputRatio": 1.6373366798549343,
+  "outputEquivalent": true,
+  "runs": [
+    {
+      "round": 1,
+      "mode": "serial",
+      "frames": 1000,
+      "throughput": 661.6355020907021,
+      "latencyP50": 1.4608,
+      "latencyP95": 1.7458,
+      "algorithmP50": 0.8143,
+      "privateMemoryBytes": 31854592,
+      "workers": 1,
+      "queueCapacity": 8
+    },
+    {
+      "round": 1,
+      "mode": "pipeline",
+      "frames": 1000,
+      "throughput": 882.2281058994857,
+      "latencyP50": 12.8637,
+      "latencyP95": 29.6031,
+      "algorithmP50": 0.9478,
+      "privateMemoryBytes": 42635264,
+      "workers": 2,
+      "queueCapacity": 8
+    },
+    {
+      "round": 2,
+      "mode": "serial",
+      "frames": 1000,
+      "throughput": 509.1122177513684,
+      "latencyP50": 1.4368,
+      "latencyP95": 2.0061,
+      "algorithmP50": 0.8444,
+      "privateMemoryBytes": 47992832,
+      "workers": 1,
+      "queueCapacity": 8
+    },
+    {
+      "round": 2,
+      "mode": "pipeline",
+      "frames": 1000,
+      "throughput": 860.4301427952656,
+      "latencyP50": 10.583,
+      "latencyP95": 35.2291,
+      "algorithmP50": 0.9456,
+      "privateMemoryBytes": 48492544,
+      "workers": 2,
+      "queueCapacity": 8
+    },
+    {
+      "round": 3,
+      "mode": "serial",
+      "frames": 1000,
+      "throughput": 504.87091889485976,
+      "latencyP50": 1.4614,
+      "latencyP95": 2.2806,
+      "algorithmP50": 0.8517,
+      "privateMemoryBytes": 48201728,
+      "workers": 1,
+      "queueCapacity": 8
+    },
+    {
+      "round": 3,
+      "mode": "pipeline",
+      "frames": 1000,
+      "throughput": 910.2301034394591,
+      "latencyP50": 11.4781,
+      "latencyP95": 40.4156,
+      "algorithmP50": 0.9478,
+      "privateMemoryBytes": 49729536,
+      "workers": 2,
+      "queueCapacity": 8
+    },
+    {
+      "round": 4,
+      "mode": "serial",
+      "frames": 1000,
+      "throughput": 643.8651275113717,
+      "latencyP50": 1.4371,
+      "latencyP95": 1.8737,
+      "algorithmP50": 0.8401,
+      "privateMemoryBytes": 48590848,
+      "workers": 1,
+      "queueCapacity": 8
+    },
+    {
+      "round": 4,
+      "mode": "pipeline",
+      "frames": 1000,
+      "throughput": 911.0377968628048,
+      "latencyP50": 11.6695,
+      "latencyP95": 41.2072,
+      "algorithmP50": 0.9485,
+      "privateMemoryBytes": 48975872,
+      "workers": 2,
+      "queueCapacity": 8
+    },
+    {
+      "round": 5,
+      "mode": "serial",
+      "frames": 1000,
+      "throughput": 468.400002735456,
+      "latencyP50": 1.4215,
+      "latencyP95": 1.8899,
+      "algorithmP50": 0.8387,
+      "privateMemoryBytes": 49950720,
+      "workers": 1,
+      "queueCapacity": 8
+    },
+    {
+      "round": 5,
+      "mode": "pipeline",
+      "frames": 1000,
+      "throughput": 1000.778205132311,
+      "latencyP50": 11.5517,
+      "latencyP95": 30.4153,
+      "algorithmP50": 0.9514,
+      "privateMemoryBytes": 53555200,
+      "workers": 2,
+      "queueCapacity": 8
+    }
+  ]
+}
